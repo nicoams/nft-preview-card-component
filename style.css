@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: hsl(217deg, 54%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper {
+  width: 19vw;
+  height: 67vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: rgba(139, 172, 218, 0.7);
+  background-color: hsl(216deg, 50%, 16%);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+}
+.card-wrapper .card-banner {
+  width: 100%;
+  height: 55%;
+  margin-bottom: 1rem;
+}
+.card-wrapper .card-banner img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-wrapper .card-info {
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-wrapper .card-info h3 {
+  color: hsl(0deg, 0%, 100%);
+}
+.card-wrapper .card-info .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+.card-wrapper .card-info .details .price, .card-wrapper .card-info .details .time {
+  display: flex;
+  align-items: center;
+}
+.card-wrapper .card-info .details .price {
+  color: hsl(178deg, 100%, 50%);
+}
+.card-wrapper .card-info .details img {
+  height: 1rem;
+  margin-right: 0.3rem;
+}
+.card-wrapper .author-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid hsl(215deg, 32%, 27%);
+  padding-top: 1rem;
+}
+.card-wrapper .author-info .author-picture {
+  height: 2rem;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 5rem;
+}
+.card-wrapper .author-info p {
+  margin-left: 0.5rem;
+}
+.card-wrapper .author-info span {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+  text-decoration: none;
+}
+
+@media (min-width: 600px) and (max-width: 1150px) {
+  .card-wrapper {
+    width: 35%;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  .card-wrapper {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */

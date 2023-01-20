@@ -1,0 +1,140 @@
+$primary-softBlue: hsl(215, 51%, 70%);
+$primary-cyan: hsl(178, 100%, 50%);
+$neutral-veryDarkBlue-Main: hsl(217, 54%, 11%);
+$neutral-veryDarkBlue-Card: hsl(216, 50%, 16%);
+$neutral-veryDarkBlue-Line: hsl(215, 32%, 27%);
+$neutral-white: hsl(0, 0%, 100%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: $neutral-veryDarkBlue-Main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper{
+    width: 19vw;
+    height: 67vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1rem;
+    color: rgba($primary-softBlue, 0.7);
+    
+
+    background-color: $neutral-veryDarkBlue-Card;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 1rem 1rem rgb(0 0 0 / 10%);
+    
+
+    padding: 1.2rem;
+    
+    .card-banner{
+        width: 100%;
+        height: 55%;
+        margin-bottom: 1rem;
+        
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 0.6rem;
+            object-fit: cover;
+        }
+    }
+
+    .card-info{
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        h3{
+            color: $neutral-white;
+        }
+
+        .details{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: 0.8rem;
+            
+            margin: 0.5rem 0;
+
+            .price, .time{
+                display: flex;
+                align-items: center;
+            }
+
+            .price{
+                color: $primary-cyan;
+            }
+
+            img{
+                height: 1rem;
+                margin-right: 0.3rem;
+            }
+        }
+    }
+
+    .author-info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        border-top: 1px solid $neutral-veryDarkBlue-Line;
+        padding-top: 1rem;
+
+        .author-picture{
+            height: 2rem;
+            border: 1px solid $neutral-white;
+            border-radius: 5rem;
+        }
+
+        p{
+            margin-left: 0.5rem;
+        }
+
+        span{
+            color: $neutral-white;
+        }
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    color: $neutral-white;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+@media (min-width: 600px) and (max-width: 1150px){
+    .card-wrapper{
+        width: 35%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px){
+    .card-wrapper{
+        width: 90%;
+    }
+}
