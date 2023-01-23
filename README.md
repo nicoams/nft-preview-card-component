@@ -41,8 +41,8 @@ Mobile Active States
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/nft-preview-card-component-xDMFlQWjc3)
+- Live Site URL: [GitHub](https://nicoams.github.io/nft-preview-card-component/)
 
 ## My process
 
