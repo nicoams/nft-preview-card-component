@@ -32,25 +32,51 @@ body {
 .card-wrapper .card-banner {
   width: 100%;
   height: 55%;
-  margin-bottom: 1rem;
+  display: flex;
+  border-radius: 0.6rem;
+  position: relative;
 }
-.card-wrapper .card-banner img {
+.card-wrapper .card-banner .img-banner {
   height: 100%;
   width: 100%;
-  border-radius: 0.6rem;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: inherit;
+  z-index: 1;
 }
-.card-wrapper .card-info {
+.card-wrapper .card-banner .overlay-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 255, 247, 0.5);
+  z-index: 2;
+}
+.card-wrapper .card-banner .overlay-banner:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card-info {
   height: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-top: 1rem;
 }
-.card-wrapper .card-info h3 {
+.card-info h3 {
   color: hsl(0deg, 0%, 100%);
 }
-.card-wrapper .card-info .details {
+.card-info .details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -58,34 +84,40 @@ body {
   font-size: 0.8rem;
   margin: 0.5rem 0;
 }
-.card-wrapper .card-info .details .price, .card-wrapper .card-info .details .time {
+.card-info .details .price, .card-info .details .time {
   display: flex;
   align-items: center;
 }
-.card-wrapper .card-info .details .price {
+.card-info .details .price {
   color: hsl(178deg, 100%, 50%);
 }
-.card-wrapper .card-info .details img {
+.card-info .details img {
   height: 1rem;
   margin-right: 0.3rem;
 }
-.card-wrapper .author-info {
+
+.author-info {
   display: flex;
   flex-direction: row;
   align-items: center;
   border-top: 1px solid hsl(215deg, 32%, 27%);
   padding-top: 1rem;
 }
-.card-wrapper .author-info .author-picture {
+.author-info .author-picture {
   height: 2rem;
   border: 1px solid hsl(0deg, 0%, 100%);
   border-radius: 5rem;
 }
-.card-wrapper .author-info p {
+.author-info p {
   margin-left: 0.5rem;
 }
-.card-wrapper .author-info span {
+.author-info .author-name {
   color: hsl(0deg, 0%, 100%);
+}
+
+h3:hover, .author-name:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
 }
 
 .attribution {
@@ -97,7 +129,7 @@ body {
 }
 
 .attribution a {
-  color: hsl(228deg, 45%, 44%);
+  color: hsl(215deg, 51%, 70%);
   text-decoration: none;
 }
 
